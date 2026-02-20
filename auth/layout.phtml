@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Mini-Projet Auth</title>
+</head>
+<body>
+    <header>
+        <h1>Mon Application</h1>
+    </header>
+
+    <main>
+        <?php 
+        // Étape 5 : Routage selon la variable $route définie dans index.php
+        if ($route === null || $route === 'home') {
+            require 'home.phtml';
+        } elseif ($route === 'inscription') {
+            require 'register.phtml';
+        } elseif ($route === 'connexion') {
+            require 'login.phtml';
+        }
+        ?>
+    </main>
+</body>
+</html>
